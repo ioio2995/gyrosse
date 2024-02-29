@@ -13,6 +13,7 @@ if [ ! -d "$src_dir" ]; then
 else
     echo "The directory $src_dir already exists."
 fi
+wget https://raw.githubusercontent.com/ioio2995/gyrosse/master/gyrosse.repos
 vcs import ./$src_dir < ./gyrosse.repos
 wget https://raw.githubusercontent.com/ros-controls/control.ros.org/master/ros_controls.$ROS_DISTRO.repos -O ./ros_controls.repos
 vcs import ./$src_dir < ./ros_controls.repos
